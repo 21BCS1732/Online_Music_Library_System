@@ -1,0 +1,115 @@
+:root{
+	--primary-color: #0b1828;
+	--secondary-color: #edf2fc;
+}
+
+.dark-theme{
+	--primary-color: #fff;
+	--secondary-color: blue;
+}
+
+#icon{
+	position: relative;
+	top: 12px;
+	height: 20px;
+	cursor: pointer;
+}
+
+
+body{
+	background-color: var(--primary-color);
+	min-width: 350px;
+}
+
+body a{
+	text-decoration: none;
+}
+
+/* .mainnav .active{
+
+	color: red!important;
+}
+
+.mainnav .active::after{
+
+	content: '';
+	background-color: red;
+	height:2px;
+	display: block;
+	margin-top: 5px;
+} */
+
+
+.hero-nav .active{
+
+	color: red!important;
+	background-color: transparent!important;
+}
+
+.hero-nav .active::after{
+
+	content: '';
+	background-color: red;
+	height:2px;
+	display: block;
+	margin-top: 5px;
+}
+
+.hero-area{
+    margin-top: 50px;
+	/* background-image: url('/PIC/pathan.jpg'); */
+	min-height: 200px;
+	background-position: 20% 30%;
+	background-size: 100%;
+}
+
+.image-player img{
+    display: flex;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    left: 470px;
+    top: 50px;
+}
+
+
+/* .image-player .audiplay{
+    position: relative;
+    top: 230px;
+    width: 100%;
+} */
+
+.ap_container{
+    width: 100%;
+    background: var(--secondary-color);
+    position: relative;
+    top: 5rem;
+}
+
+.ap_controls{
+    background: var(--primary-color);
+}
+@media (max-width: 602px)
+{
+	.nav-spacer{
+		height: 50px;
+	}
+
+}
+
+
+@media (max-width: 435px)
+{
+	.nav-spacer{
+		height: 80px;
+	}
+
+}
+
+
+/* @media screen and(max-width: 480px){
+    .image-player img{
+        width: 100%;
+    }
+} */
+
