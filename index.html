@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>SONGAZM</title>
+	<link rel="shortcut icon" href="/images/logo.jpg">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-icons.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+</head>
+
+<body>
+
+	<!--start main area-->
+	<main>
+		<!--start navigation-->
+		<nav class="mainnav shadow navbar-expand-lg navbar navbar-dark bg-dark fixed-top" style="min-width: 350px">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="/index.html">
+					<i class="bi bi-soundwave"></i>
+					<span style="color:red">SONGAZM</span>
+					<div style="font-size: 13px">Unleash your potential</div>
+				</a>
+
+				<div>
+					<div class="input-group ">
+						<input type="text" class="form-control" id="myMusic" placeholder="Search Your Music Here" aria-label="Recipient's username"
+							aria-describedby="basic-addon2" onkeyup="SearchMusic()">
+						<button class="bg-black text-white border-0 input-group-text" id="basic-addon2"><i
+								class="bi bi-search"></i></button> 
+					</div>
+				</div>
+
+				<div class="text-white h4 mx-3">
+					<a href="">
+						<i class="bi bi-facebook"></i>
+					</a>
+					<a href="">
+						<i class="bi bi-twitter"></i>
+					</a>
+					<a href="">
+						<i class="bi bi-instagram"></i>
+					</a>
+				</div>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="/HTML/login.html">Login</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="#">Home</a>
+						</li>
+
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Discover
+							</a>
+							<ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item text-white" href="#">New Songs</a></li>
+								<li><a class="dropdown-item text-white" href="#">Artists</a></li>
+								<!-- <li><hr class="dropdown-divider"></li> -->
+								<li><a class="dropdown-item text-white" href="#">Old Songs</a></li>
+								<li><a class="dropdown-item text-white" href="#">1990 Hits</a></li>
+								<li><a class="dropdown-item text-white" href="#">Genres</a></li>
+							</ul>
+						</li>
+
+
+						<!-- <li class="nav-item">
+							<a class="nav-link" href="#">Discover</a>
+						</li> -->
+
+
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Trending
+							</a>
+							<ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item text-white" href="#">Bollywood Trending</a></li>
+								<li><a class="dropdown-item text-white" href="#">Hollywood Trending</a></li>
+								<!-- <li><hr class="dropdown-divider"></li> -->
+								<li><a class="dropdown-item text-white" href="#">Punjabi Trending</a></li>
+								<li><a class="dropdown-item text-white" href="#">Bhojpuri Trending</a></li>
+								<li><a class="dropdown-item text-white" href="#">Marathi Trending</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="#">New</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="/HTML/login.html">Logout</a>
+						</li>
+
+						<img src="/images/moon.png" id="icon" alt="">
+
+						<!-- <img class="rounded-circle" src="images/06.jpg" style="width:40px;height:40px">
+		        <li class="nav-item dropdown">
+		          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            Hi, John
+		          </a>
+		          <ul class="dropdown-menu dropdown-menu-end bg-dark" aria-labelledby="navbarDropdown">
+		            <li><a class="dropdown-item text-white" href="#"><i class="bi bi-person"></i> Profile</a></li>
+		            <li><a class="dropdown-item text-white" href="#"><i class="bi bi-gear"></i> Settings</a></li>
+		            <li><hr class="dropdown-divider"></li>
+		            <li><a class="dropdown-item text-white" href="#"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+		          </ul>
+		        </li> -->
+					</ul>
+				</div>
+			</div>
+		</nav><!--end navigation-->
+
+
+		<!--start hero area-->
+		<div class="hero-area text-white pt-5 mt-2">
+
+			<div class="nav-spacer"></div>
+
+			<ul class="hero-nav nav m-4 nav-pills mb-3" id="pills-tab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button class="text-white nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+						data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+						aria-selected="true">Featured</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="text-white nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+						data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+						aria-selected="false">Trending</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="text-white nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+						data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+						aria-selected="false">New Release</button>
+				</li>
+			</ul>
+			<div class="tab-content" id="pills-tabContent">
+				<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+					tabindex="0">
+
+					<!--small song item-->
+					<div class="song-small m-1 ms-4 col-md-6 row align-items-center">
+						<div class="col-1 h3">01</div>
+						<div class="col d-flex">
+							<img class="song-small-img rounded m-1" src="images/06.jpg">
+							<div class="ms-1">
+								<!-- <a href="">My heart will go on</a> -->
+								<div>My heart will go on</div>
+								<small>a song description</small>
+							</div>
+						</div>
+						<div class="col-2">05:00 <i class="bi bi-play"></i></div>
+					</div>
+					<!--end small song item-->
+
+					<!--small song item-->
+					<div class="song-small m-1 ms-4 col-md-6 row align-items-center">
+						<div class="col-1 h3">02</div>
+						<div class="col d-flex">
+							<img class="song-small-img rounded m-1" src="images/04.jpg">
+							<div class="ms-1">
+								<div>Another song</div>
+								<small>a song description</small>
+							</div>
+						</div>
+						<div class="col-2">05:00 <i class="bi bi-play"></i></div>
+					</div>
+					<!--end small song item-->
+
+					<!--small song item-->
+					<div class="song-small m-1 ms-4 col-md-6 row align-items-center">
+						<div class="col-1 h3">03</div>
+						<div class="col d-flex">
+							<img class="song-small-img rounded m-1" src="images/05.jpg">
+							<div class="ms-1">
+								<div>My confessions</div>
+								<small>a song description</small>
+							</div>
+						</div>
+						<div class="col-2">05:00 <i class="bi bi-play"></i></div>
+					</div>
+					<!--end small song item-->
+
+
+
+				</div>
+				<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+					tabindex="0">
+					<!--small song item-->
+					<div class="song-small m-1 ms-4 col-md-6 row align-items-center">
+						<div class="col-1 h3">04</div>
+						<div class="col d-flex">
+							<img class="song-small-img rounded m-1" src="images/09.jpg">
+							<div class="ms-1">
+								<div>My heart will go on</div>
+								<small>a song description</small>
+							</div>
+						</div>
+						<div class="col-2">05:00 <i class="bi bi-play"></i></div>
+					</div>
+					<!--end small song item-->
+
+					<!--small song item-->
+					<div class="song-small m-1 ms-4 col-md-6 row align-items-center">
+						<div class="col-1 h3">05</div>
+						<div class="col d-flex">
+							<img class="song-small-img rounded m-1" src="images/08.jpg">
+							<div class="ms-1">
+								<div>Another song</div>
+								<small>a song description</small>
+							</div>
+						</div>
+						<div class="col-2">05:00 <i class="bi bi-play"></i></div>
+					</div>
+					<!--end small song item-->
+
+					<!--small song item-->
+					<div class="song-small m-1 ms-4 col-md-6 row align-items-center">
+						<div class="col-1 h3">06</div>
+						<div class="col d-flex">
+							<img class="song-small-img rounded m-1" src="images/10.jpg">
+							<div class="ms-1">
+								<div>My confessions</div>
+								<small>a song description</small>
+							</div>
+						</div>
+						<div class="col-2">05:00 <i class="bi bi-play"></i></div>
+					</div>
+					<!--end small song item-->
+
+					<!--small song item-->
+					<div class="song-small m-1 ms-4 col-md-6 row align-items-center">
+						<div class="col-1 h3">07</div>
+						<div class="col d-flex">
+							<img class="song-small-img rounded m-1" src="images/12.jpg">
+							<div class="ms-1">
+								<div>Hello</div>
+								<small>a song description</small>
+							</div>
+						</div>
+						<div class="col-2">05:00 <i class="bi bi-play"></i></div>
+					</div>
+					<!--end small song item-->
+
+
+				</div>
+				<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+					tabindex="0">
+
+					<!--small song item-->
+					<div class="song-small m-1 ms-4 col-md-6 row align-items-center">
+						<div class="col-1 h3">07</div>
+						<div class="col d-flex">
+							<img class="song-small-img rounded m-1" src="images/06.jpg">
+							<div class="ms-1">
+								<div>My heart will go on</div>
+								<small>a song description</small>
+							</div>
+						</div>
+						<div class="col-2">05:00 <i class="bi bi-play"></i></div>
+					</div>
+					<!--end small song item-->
+
+					<!--small song item-->
+					<div class="song-small m-1 ms-4 col-md-6 row align-items-center">
+						<div class="col-1 h3">08</div>
+						<div class="col d-flex">
+							<img class="song-small-img rounded m-1" src="images/04.jpg">
+							<div class="ms-1">
+								<div>Another song</div>
+								<small>a song description</small>
+							</div>
+						</div>
+						<div class="col-2">05:00 <i class="bi bi-play"></i></div>
+					</div>
+					<!--end small song item-->
+
+					<!--small song item-->
+					<div class="song-small m-1 ms-4 col-md-6 row align-items-center">
+						<div class="col-1 h3">09</div>
+						<div class="col d-flex">
+							<img class="song-small-img rounded m-1" src="images/05.jpg">
+							<div class="ms-1">
+								<div>My confessions</div>
+								<small>a song description</small>
+							</div>
+						</div>
+						<div class="col-2">05:00 <i class="bi bi-play"></i></div>
+					</div>
+					<!--end small song item-->
+
+					<!--small song item-->
+					<div class="song-small m-1 ms-4 col-md-6 row align-items-center">
+						<div class="col-1 h3">10</div>
+						<div class="col d-flex">
+							<img class="song-small-img rounded m-1" src="images/14.jpg">
+							<div class="ms-1">
+								<div>Hey there babe</div>
+								<small>a song description</small>
+							</div>
+						</div>
+						<div class="col-2">05:00 <i class="bi bi-play"></i></div>
+					</div>
+					<!--end small song item-->
+
+					<!--small song item-->
+					<div class="song-small m-1 ms-4 col-md-6 row align-items-center">
+						<div class="col-1 h3">11</div>
+						<div class="col d-flex">
+							<img class="song-small-img rounded m-1" src="images/11.jpg">
+							<div class="ms-1">
+								<div>John Banda</div>
+								<small>a song description</small>
+							</div>
+						</div>
+						<div class="col-2">05:00 <i class="bi bi-play"></i></div>
+					</div>
+					<!--end small song item-->
+
+
+				</div>
+			</div>
+
+
+		</div>
+		<!--end hero area-->
+
+		<h5 class="song-category-title mx-5 pt-4">Bollywood hits <small class="float-end"><a
+					href="/MUSIC HTML/bollywood-hits-view-all.html">View more <i
+						class="bi bi-box-arrow-up-right"></i></a></small></h5>
+
+		<!-- start category area-->
+		<section class="pt-2 p-4 mx-5 d-flex justify-content-center" style="flex-wrap: wrap;">
+
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px,">
+
+				<div style="position: relative;">
+					<img src="/PIC/BOLLYWOOD PICS/bol-do-na-zara.png" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+					<div class="big-song-hover ">
+						<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/01 - Bol Do Na Zara [Songspk.LINK].mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+
+
+					</div>
+					<!-- </a> -->
+				</div>
+				<div>
+					<div class="lead text-white">Bol do na zara</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/BOLLYWOOD PICS/ijazat.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+					<div class="big-song-hover ">
+						<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Ijazat - Arijit Singh - 320Kbps.mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+					</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Ijazat</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/BOLLYWOOD PICS/jashn-ee-bahara.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+					<div class="big-song-hover ">
+						<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/_Jashn E Bahaara - Jodhaa Akbar(PagalWorld.com).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+					</div>
+					<!-- </a> -->
+				</div>
+				<div>
+					<div class="lead text-white">Jashn E Bahaaraa</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/BOLLYWOOD PICS/subhanallah.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+					<div class="big-song-hover ">
+						<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/06. SubhanAllah.mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+
+					</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">SubhanAllah</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/BOLLYWOOD PICS/kinna-sona.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/04 Kinna Sona (Bhaag Johnny) 320Kbps.mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Kinna sona</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/BOLLYWOOD PICS/mast-malang.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Mast Magan - Arijit Singh - 320Kbps.mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Mast malang</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/BOLLYWOOD PICS/saiyara.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Saiyaara</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/BOLLYWOOD PICS/mere-yarra.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Mere Yaaraa - Sooryavanshi.mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Mere yarra</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+
+
+		</section>
+		<!-- end category area-->
+
+		<h5 class="song-category-title mx-5 pt-4">Hollywood hits <small class="float-end"><a href="/MUSIC HTML/hollywood-hits-view-all.html">View more <i
+						class="bi bi-box-arrow-up-right"></i></a></small></h5>
+
+		<!-- start category area-->
+		<section class="pt-2 p-4 mx-5 d-flex justify-content-center" style="flex-wrap: wrap;">
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/HOLLYWOOD PICS/let-me-down-slowly.jpeg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/English songs/Let-Me-Down-Slowly(PagalWorldl).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Let me down slowly</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/HOLLYWOOD PICS/billonera.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/English songs/Bilionera(PagalWorld).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Billonera</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/HOLLYWOOD PICS/love-your-voice.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/English songs/Love-Your-Voice(PagalWorld).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Love your voice</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/HOLLYWOOD PICS/middle-of-the-night.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/English songs/Middle-Of-The-Night(PagalWorldl).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					<!-- </a> -->
+				</div>
+				<div>
+					<div class="lead text-white">Middle of the night</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/HOLLYWOOD PICS/safari.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/English songs/Safari(PagalWorld).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					<!-- </a> -->
+				</div>
+				<div>
+					<div class="lead text-white">Safari</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/HOLLYWOOD PICS/heat-waves.jpg" class="big-song-img rounded img-fluid">
+					<a href="#">
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/English songs/Heat-Waves(PagalWorld).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					<!-- </a> -->
+				</div>
+				<div>
+					<div class="lead text-white">Heat Waves</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/HOLLYWOOD PICS/harleys-in-hawaii.jpg" class="big-song-img rounded img-fluid">
+					<a href="#">
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/English songs/Harleys-In-Hawaii(PagalWorld).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					<!-- </a> -->
+				</div>
+				<div>
+					<div class="lead text-white">Harlyes in hawaii</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/HOLLYWOOD PICS/positions.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/English songs/Positions---Ariana-Grande(pagolworld.nl).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Positions</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+		</section>
+		<!-- end category area-->
+
+
+		<h5 class="song-category-title mx-5 pt-4">Punjabi hits <small class="float-end"><a href="/MUSIC HTML/punjabi-hits-view-all.html">View more <i
+			class="bi bi-box-arrow-up-right"></i></a></small></h5>
+
+<!-- start category area-->
+<section class="pt-2 p-4 mx-5 d-flex justify-content-center" style="flex-wrap: wrap;">
+
+<!--song card start-->
+<div class="m-4" style="width: 200px;">
+	<div style="position: relative;">
+		<img src="/PIC/PUNJABI PICS/bapu zimidar.jpg" class="big-song-img rounded img-fluid">
+		<!-- <a href="#"> -->
+			<div class="big-song-hover ">
+				<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+				src="/MUSICS/Punjabi Songs/Bapu Zimidar  Jassi Gill.mp3"></audio>
+			<button onclick="playAudio()">
+				<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+			</button>
+			</div>
+		</a>
+	</div>
+	<div>
+		<div class="lead text-white">Bappu Zimidar</div>
+		<small class="text-muted">By Jassi Gill</small>
+	</div>
+</div>
+<!--song card end-->
+
+
+<!--song card start-->
+<div class="m-4" style="width: 200px;">
+	<div style="position: relative;">
+		<img src="/PIC/PUNJABI PICS/excuses.jpg" class="big-song-img rounded img-fluid">
+		<!-- <a href="#"> -->
+			<div class="big-song-hover ">
+				<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+				src="/MUSICS/Punjabi Songs/Excuses_320(PagalWorld).mp3"></audio>
+			<button onclick="playAudio()">
+				<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+			</button>
+			</div>
+		</a>
+	</div>
+	<div>
+		<div class="lead text-white">Excuses</div>
+		<small class="text-muted">By AP dhillon</small>
+	</div>
+</div>
+<!--song card end-->
+
+<!--song card start-->
+<div class="m-4" style="width: 200px;">
+	<div style="position: relative;">
+		<img src="/PIC/PUNJABI PICS/8-parche.jpg" class="big-song-img rounded img-fluid">
+		<!-- <a href="#"> -->
+			<div class="big-song-hover ">
+				<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+				src="/MUSICS/Punjabi Songs/new_320_8 Parche - Baani Sandhu.mp3"></audio>
+			<button onclick="playAudio()">
+				<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+			</button>
+			</div>
+		</a>
+	</div>
+	<div>
+		<div class="lead text-white">8 Parche</div>
+		<small class="text-muted">Song description</small>
+	</div>
+</div>
+<!--song card end-->
+
+<!--song card start-->
+<div class="m-4" style="width: 200px;">
+	<div style="position: relative;">
+		<img src="images/14.jpg" class="big-song-img rounded img-fluid">
+		<!-- <a href="#"> -->
+			<div class="big-song-hover ">
+				<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+				src="/MUSICS/Punjabi Songs/"></audio>
+			<button onclick="playAudio()">
+				<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+			</button>
+			</div>
+		</a>
+	</div>
+	<div>
+		<div class="lead text-white">Never coming home</div>
+		<small class="text-muted">Song description</small>
+	</div>
+</div>
+<!--song card end-->
+
+<!--song card start-->
+<div class="m-4" style="width: 200px;">
+	<div style="position: relative;">
+		<img src="images/07.jpg" class="big-song-img rounded img-fluid">
+		<!-- <a href="#"> -->
+			<div class="big-song-hover ">
+				<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+				src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+			<button onclick="playAudio()">
+				<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+			</button>
+			</div>
+		</a>
+	</div>
+	<div>
+		<div class="lead text-white">Bye bye baby</div>
+		<small class="text-muted">Song description</small>
+	</div>
+</div>
+<!--song card end-->
+
+<!--song card start-->
+<div class="m-4" style="width: 200px;">
+	<div style="position: relative;">
+		<img src="images/08.jpg" class="big-song-img rounded img-fluid">
+		<!-- <a href="#"> -->
+			<div class="big-song-hover ">
+				<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+				src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+			<button onclick="playAudio()">
+				<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+			</button>
+			</div>
+		</a>
+	</div>
+	<div>
+		<div class="lead text-white">Chicken run</div>
+		<small class="text-muted">Song description</small>
+	</div>
+</div>
+<!--song card end-->
+
+<!--song card start-->
+<div class="m-4" style="width: 200px;">
+	<div style="position: relative;">
+		<img src="images/09.jpg" class="big-song-img rounded img-fluid">
+		<!-- <a href="#"> -->
+			<div class="big-song-hover ">
+				<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+				src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+			<button onclick="playAudio()">
+				<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+			</button>
+			</div>
+		</a>
+	</div>
+	<div>
+		<div class="lead text-white">End of the road</div>
+		<small class="text-muted">Song description</small>
+	</div>
+</div>
+<!--song card end-->
+
+<!--song card start-->
+<div class="m-4" style="width: 200px;">
+	<div style="position: relative;">
+		<img src="images/10.jpg" class="big-song-img rounded img-fluid">
+		<!-- <a href="#"> -->
+			<div class="big-song-hover ">
+				<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+				src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+			<button onclick="playAudio()">
+				<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+			</button>
+			</div>
+		</a>
+	</div>
+	<div>
+		<div class="lead text-white">journey to the end</div>
+		<small class="text-muted">Song description</small>
+	</div>
+</div>
+<!--song card end-->
+
+</section>
+<!-- end category area-->
+
+
+
+
+		<h5 class="song-category-title mx-5 pt-4">Bhojpuri hits <small class="float-end"><a href="/MUSIC HTML/bhojpuri-hits-view-all.html">View more <i
+						class="bi bi-box-arrow-up-right"></i></a></small></h5>
+
+		<!-- start category area-->
+		<section class="pt-2 p-4 mx-5 d-flex justify-content-center" style="flex-wrap: wrap;">
+
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/12.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">My love</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/13.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">East river dale</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/14.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Never coming home</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/07.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Bye bye baby</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/08.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Chicken run</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/09.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">End of the road</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/10.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">journey to the end</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/13.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Fix my bike</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+		</section>
+		<!-- end category area-->
+
+
+		<h5 class="song-category-title mx-5 pt-4">Telugu hits <small class="float-end"><a href="/MUSIC HTML/telugu-hits-view-all.html">View more <i
+						class="bi bi-box-arrow-up-right"></i></a></small></h5>
+
+		<!-- start category area-->
+		<section class="pt-2 p-4 mx-5 d-flex justify-content-center" style="flex-wrap: wrap;">
+
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/12.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">My love</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/13.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">East river dale</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/14.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Never coming home</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/07.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Bye bye baby</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/08.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Chicken run</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/09.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">End of the road</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/10.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">journey to the end</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/13.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Fix my bike</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+		</section>
+		<!-- end category area-->
+
+
+		<h5 class="song-category-title mx-5 pt-4">Bhajan hits <small class="float-end"><a href="/MUSIC HTML/bhajan-hits-view-all.html">View more <i
+						class="bi bi-box-arrow-up-right"></i></a></small></h5>
+
+		<!-- start category area-->
+		<section class="pt-2 p-4 mx-5 d-flex justify-content-center" style="flex-wrap: wrap;">
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/BHAJAN PICS/aao gharme padharo gajanand ji.png" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bhajan/AaoJiGharmeinpadharogajanandji.mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Aao Ji Gharme in padharo gajanand ji</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/BHAJAN PICS/Baje che.png" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bhajan/BajeChe.mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Baje Che</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/13.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bhajan/BhaiReMatDeejo.mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Bhai Re Mat Dee jo</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/14.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Never coming home</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/07.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Bye bye baby</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/08.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Chicken run</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/09.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">End of the road</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="images/10.jpg" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Bollywood Songs/Saiyaara (Ek Tha Tiger).mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">journey to the end</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+		</section>
+		<!-- end category area-->
+
+		<h5 class="song-category-title mx-5 pt-4">Marathi hits <small class="float-end"><a href="/MUSIC HTML/marathi-hits-view-all.html">View more <i
+						class="bi bi-box-arrow-up-right"></i></a></small></h5>
+
+		<!-- start category area-->
+		<section class="pt-2 p-4 mx-5 d-flex justify-content-center" style="flex-wrap: wrap;">
+
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/MARATHI PICS/aabahas ha.png" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Marathi songs/aabhas ha.mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Aabhas ha</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/MARATHI PICS/Aare krishna aare krishna.png" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Marathi songs/Aare Krishna Aare Kanha.mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Aare krishna Aare</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/MARATHI PICS/Aas tu.png" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Marathi songs/Aas Tu.mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Aas tu</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/MARATHI PICS/Aatach Baya Ka Baavarla.png" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Marathi songs/Aatach Baya Ka Baavarla.mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Aatach Baya Ka Baavarla</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/MARATHI PICS/Aikavi Vatate.png" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Marathi songs/Aikavi Vatate.mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Aikavi Vatate</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/MARATHI PICS/Airanichya Deva Tula Sang.png" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Marathi songs/Airanichya Deva Tula Sang.mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Airanichya Deva Tula Sang</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/MARATHI PICS/Ajay Atul.png" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Marathi songs/Ajay Atul.mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Ajay Atul</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+			<!--song card start-->
+			<div class="m-4" style="width: 200px;">
+				<div style="position: relative;">
+					<img src="/PIC/MARATHI PICS/Ali Ali Kanha.png" class="big-song-img rounded img-fluid">
+					<!-- <a href="#"> -->
+						<div class="big-song-hover ">
+							<audio controls controlsList="nodownload" style="position: relative; top:63px; width: 100%;" id="myAudio"
+							src="/MUSICS/Marathi songs/Ali Ali Kanha.mp3"></audio>
+						<button onclick="playAudio()">
+							<!-- <span><i class="h1 bi bi-play" style="color:rgb(51, 167, 222)"></i></span>	 -->
+						</button>
+						</div>
+					</a>
+				</div>
+				<div>
+					<div class="lead text-white">Ali Ali Kanha</div>
+					<small class="text-muted">Song description</small>
+				</div>
+			</div>
+			<!--song card end-->
+
+		</section>
+		<!-- end category area-->
+
+
+	</main><!--end main area-->
+
+	<footer class="p-5 pt-4  row bg-dark text-white">
+
+		<div class="col-md-3 mb-4 col-sm-6">
+			<h5>Quick links</h5>
+			<ul class="nav flex-column">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Latest</a></li>
+				<li><a href="#">Signup</a></li>
+				<li><a href="#">Login</a></li>
+			</ul>
+		</div>
+		<div class="col-md-3 mb-4 col-sm-6">
+			<h5>Quick links</h5>
+			<ul class="nav flex-column">
+				<li><a href="#">Featured</a></li>
+				<li><a href="#">New releases</a></li>
+				<li><a href="/HTML/login.html">Signup</a></li>
+				<li><a href="/HTML/login.html">Login</a></li>
+			</ul>
+		</div>
+		<div class="col-md-6 mb-4">
+			<h5>Subscribe to our newsletter</h5>
+			<div>to receive news content</div>
+
+			<div class="input-group mb-3 mt-2">
+				<input type="text" class="form-control" placeholder="Email">
+				<span class="bg-primary text-white input-group-text" id="basic-addon2">Subscribe</span>
+			</div>
+
+			<div class="text-white h5 ">
+				Follow us:
+				<a href="">
+					<i class="bi bi-facebook"></i>
+				</a>
+				<a href="">
+					<i class="bi bi-twitter"></i>
+				</a>
+				<a href="">
+					<i class="bi bi-instagram"></i>
+				</a>
+			</div>
+
+		</div>
+	</footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/gh/sh20raj/AudiPlay/audiplay.min.js"></script>
+
+<script>
+	function playAudio() {
+		var audio = document.getElementById("myAudio");
+		if (audio.paused) { audio.play(); } else { audio.pause(); }
+	} 
+</script>
+
+<script src="js/bootstrap.min.js"></script>
+<script>
+	var icon = document.getElementById("icon");
+
+	icon.onclick = function () {
+		document.body.classList.toggle("dark-theme");
+	}
+
+	if (document.body.classList.contains("dark-theme")) {
+		icon.src = "/images/sun.png";
+	}
+
+	else {
+		icon.src = "/images/moon.png";
+	}
+</script>
+
+<script>
+	const SearchMusic = () =>{
+		let filter = document.getElementById('myMusic').value.toUpperCase();
+	}
+
+
+</script>
+
+</html>
